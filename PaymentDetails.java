@@ -113,7 +113,6 @@ public class PaymentDetails {
 	public void verifyInvalidPaymentDetailError(){
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		String notValidPaymentDetails0 ="There appears to be a problem with the payment method you are trying to use.";
-	//	String notValidPaymentDetails2 ="A valid card number must be entered into the form.";
 		
 		wait.until(ExpectedConditions.visibilityOf(errorMsgArea));
 		AssertJUnit.assertEquals(errorMsgArea.getText(), notValidPaymentDetails0);
